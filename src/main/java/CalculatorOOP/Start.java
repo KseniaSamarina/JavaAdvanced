@@ -14,8 +14,10 @@ public class Start {
         System.out.println("Enter operation (+, -, *, /):");
         char operation = scanner.next().charAt(0);
         Calculator calculator = new Calculator(inputFirstNumber, operation, inputSecondNumber);
+            if (calculator.calculate().getResult() == Double.POSITIVE_INFINITY)
+                throw new ArithmeticException("Double overflowed");
         System.out.println("Answer:");
-        System.out.printf("%.2f", calculator.calculate().getResult());
+        System.out.printf("%.4f", calculator.calculate().getResult());
         scanner.close();
         } catch (InputMismatchException ex) {
             System.out.println("You entered an incorrect number");
