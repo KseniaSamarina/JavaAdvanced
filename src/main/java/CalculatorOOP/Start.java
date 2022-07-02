@@ -20,7 +20,7 @@ public class Start {
         } catch (InputMismatchException ex) {
             System.out.println("You entered an incorrect number");
         } catch (ArithmeticException ex1) {
-            System.out.println("Dividing by zero is prohibited");
+            System.out.println(ex1.getMessage());
         } catch (NullPointerException ex2) {
             System.out.println("You have entered an incorrect operation symbol");
         }
