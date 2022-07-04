@@ -8,21 +8,10 @@ public class Division extends Action {
     }
 
     @Override
-    public double getResult()  throws ArithmeticException {
-        double result = inputFirstNumber / inputSecondNumber;
-        if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) {
+    public double getResult() throws ArithmeticException {
+        if (inputSecondNumber == 0.0)
             throw new ArithmeticException("Dividing by zero is prohibited");
-        }
         else
             return inputFirstNumber / inputSecondNumber;
     }
 }
-
-
-
-
-
-
-
-
-
